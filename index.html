@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nexus Invest - Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -37,11 +38,6 @@
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.05);
       }
-      .text-gradient {
-        background: linear-gradient(135deg, #FF4D00 0%, #FF8A00 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
       ::-webkit-scrollbar {
         width: 6px;
       }
@@ -52,21 +48,18 @@
         background: rgba(255, 77, 0, 0.2);
         border-radius: 10px;
       }
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 77, 0, 0.4);
-      }
     </style>
   <script type="importmap">
 {
   "imports": {
-    "recharts": "https://esm.sh/recharts@^3.7.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4",
-    "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
     "vite": "https://esm.sh/vite@^7.3.1",
-    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0"
   }
 }
 </script>
