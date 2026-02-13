@@ -275,14 +275,30 @@ const App: React.FC = () => {
           </div>
         </header>
 
+        {/* Exemplo de uso do novo StatsCard com Props title, value e description */}
         <section className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
-          <StatsCard label="APORTE" value={totals.aporte} />
-          <StatsCard label="VALORES" value={totals.lucro} isPositive={totals.isLucroPositive} />
-          <StatsCard label="TAXAS" value={totals.taxa} isPositive={false} />
-          <StatsCard label="SAQUE" value={totals.saque} isPositive={totals.isLucroPositive ? isUnlocked : false} locked={!isUnlocked} isSaque={true} />
+          <StatsCard 
+            title="APORTE" 
+            value={totals.aporte} 
+            description="Capital Inicial Alocado"
+          />
+          <StatsCard 
+            title="VALORES" 
+            value={totals.lucro} 
+            description={totals.isLucroPositive ? "Performance Positiva" : "Performance Negativa"}
+          />
+          <StatsCard 
+            title="TAXAS" 
+            value={totals.taxa} 
+            description="19% Retenção Operacional"
+          />
+          <StatsCard 
+            title="SAQUE" 
+            value={isUnlocked ? totals.saque : "FLUTUANTE"} 
+            description={isUnlocked ? "SAQUE LIBERADO" : "BLOQUEADO (MÍN 15 DIAS)"}
+          />
         </section>
 
-        {/* Ajustado: Padding e Margem para evitar mistura de nomes */}
         <section className="bg-white/[0.02] border border-white/5 p-5 md:p-8 pb-12 md:pb-14 rounded-3xl">
           <div className="flex justify-between items-center mb-10 md:mb-12">
             <span className="text-[10px] font-bold text-[#FF4D00] tracking-[0.2em] uppercase">Ciclo de Operação</span>
@@ -295,7 +311,6 @@ const App: React.FC = () => {
             <div className={`absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 z-20 flex items-center justify-center ${isUnlocked ? 'bg-emerald-500 border-emerald-300' : 'bg-[#0D0D0D] border-white/20'}`} style={{ left: `${(15 / totalDays) * 100}%` }}>
               {isUnlocked ? <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"><path d="M20 6 9 17l-5-5"/></svg> : <div className="w-1.5 h-1.5 rounded-full bg-white/20" />}
               
-              {/* Legenda: Sempre abaixo da barra para não misturar com o contador superior */}
               <div className="absolute top-7 left-1/2 -translate-x-1/2 whitespace-nowrap">
                 <span className={`text-[8px] md:text-[9px] font-bold uppercase tracking-[0.2em] ${isUnlocked ? 'text-emerald-400' : 'text-gray-600/70'}`}>
                   {isUnlocked ? 'SAQUE LIBERADO' : 'Liberação Saque (15)'}
