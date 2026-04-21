@@ -1,5 +1,6 @@
 {
-  "name": "CENTRAL FIG",
-  "description": "Um painel de investimentos premium com visualização de lucros, taxas e integração com assistente de IA para análise financeira.",
-  "requestFramePermissions": []
+  "name": "Trading Ops Dashboard",
+  "description": "A high-performance trading dashboard track daily operations with data synced from Google Sheets, featuring real-time performance metrics and visual gain/loss indicators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
 }

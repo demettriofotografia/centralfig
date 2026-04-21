@@ -1,24 +1,20 @@
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-# Nexus Invest Dashboard
+# Run and deploy your AI Studio app
 
-Dashboard financeiro premium com integração de IA.
+This contains everything you need to run your app locally.
 
-## Como fazer o Deploy
+View your app in AI Studio: https://ai.studio/apps/4753d55e-738f-4453-850f-c20cbe134863
 
-1.  **GitHub**:
-    *   Crie um novo repositório no seu GitHub.
-    *   Suba todos os arquivos desta pasta para o repositório.
-    
-2.  **Vercel**:
-    *   Acesse [vercel.com](https://vercel.com) e conecte sua conta do GitHub.
-    *   Clique em **"Add New"** > **"Project"**.
-    *   Importe o repositório que você acabou de criar.
-    *   **Importante**: Em "Environment Variables", adicione a chave `API_KEY` com o seu valor da API do Gemini.
-    *   Clique em **Deploy**.
+## Run Locally
 
-## Desenvolvimento Local
+**Prerequisites:**  Node.js
 
-```bash
-npm install
-npm run dev
-```
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
